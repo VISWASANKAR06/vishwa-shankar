@@ -1,0 +1,21 @@
+predicates
+    run(integer, integer)
+    go
+database
+    f(integer, real)
+    
+clauses
+    go:- assert(f,(1, 0)),
+    assert(f(2,1)), readint(N),
+            N>2, run(2,N).
+go:-
+    write("Enter a positive number than 2")'
+    run(I, N)if
+            I<N, I3=I+1,
+            I1=I3-1,
+            I2=I3-2,
+            f(I1,A),
+            f(I2,B), C=A+B
+            assert(f(I3,C)), run(I3, N).
+    run(N,N) if f(N,R),
+            write("Fibonacci Series", N, "is=", R), n1
