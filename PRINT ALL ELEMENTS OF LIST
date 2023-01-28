@@ -1,0 +1,10 @@
+read_student_info([A, B, C]),
+nl, nl, menu([[A, B, C] | X]).
+
+read_student_info([A, B, C]) :-
+  write('\tStudent ID: '),
+  read(A),
+  write('\tStudent Name: '),
+  read(B),
+  write('\tStudent Grade: '),
+  read(C).
