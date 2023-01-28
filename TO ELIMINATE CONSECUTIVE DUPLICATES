@@ -1,0 +1,8 @@
+?- length(Ls0, _), no_consecutive_duplicates(Ls0, Ls).
+Ls = Ls0, Ls0 = [] ;
+Ls = Ls0, Ls0 = [_G501] ;
+Ls = [_G501],
+Ls0 = [_G501, _G501] ;
+Ls = [_G775, _G775],
+Ls0 = [_G787, _G775],
+dif(_G775, _G787) .
